@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230727 22:47:30.517" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes Gherkin Bdd" source="C:\Users\Windows11\Documents\Projetos Git\cursoMayFernandes\amazon_testes_gherkin_bdd.robot">
+<test id="s1-t1" name="Acesso ao menu Eletrônicos" line="9">
+<kw name="Abrir Browser" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230727 22:47:30.693" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com.br'.</msg>
+<status status="PASS" starttime="20230727 22:47:30.692" endtime="20230727 22:47:33.154"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230727 22:47:33.154" endtime="20230727 22:47:33.276"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:30.692" endtime="20230727 22:47:33.276"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" library="amazon_resources">
+<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230727 22:47:33.277" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20230727 22:47:33.277" endtime="20230727 22:47:35.216"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MENU_ELETRONICOS}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230727 22:47:35.216" endtime="20230727 22:47:35.254"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:33.277" endtime="20230727 22:47:35.254"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230727 22:47:36.255" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230727 22:47:35.254" endtime="20230727 22:47:36.255"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230727 22:47:36.262" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
+<status status="PASS" starttime="20230727 22:47:36.255" endtime="20230727 22:47:36.262"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:35.254" endtime="20230727 22:47:36.262"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:33.277" endtime="20230727 22:47:36.262"/>
+</kw>
+<kw name="Quando acessar o menu &quot;Eletrônicos&quot;" library="amazon_resources">
+<kw name="Entrar no menu &quot;Eletrônicos&quot;" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MENU_ELETRONICOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230727 22:47:36.263" level="INFO">Clicking element '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]'.</msg>
+<status status="PASS" starttime="20230727 22:47:36.263" endtime="20230727 22:47:37.926"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:36.263" endtime="20230727 22:47:37.926"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:36.263" endtime="20230727 22:47:37.926"/>
+</kw>
+<kw name="Então o título da página deve ficar &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources">
+<kw name="Verificar se o título da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230727 22:47:38.928" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230727 22:47:37.928" endtime="20230727 22:47:38.928"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230727 22:47:38.958" level="INFO">Page title is 'Eletrônicos e Tecnologia | Amazon.com.br'.</msg>
+<status status="PASS" starttime="20230727 22:47:38.928" endtime="20230727 22:47:38.958"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:37.927" endtime="20230727 22:47:38.958"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:37.927" endtime="20230727 22:47:38.958"/>
+</kw>
+<kw name="E o texto &quot;Eletrônicos e Tecnologia&quot; deve ser exibido na página" library="amazon_resources">
+<kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;" library="amazon_resources" sourcename="Verificar se aparece a frase &quot;${FRASE}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${FRASE}</arg>
+<arg>10</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230727 22:47:38.959" endtime="20230727 22:47:39.034"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HEADER_ELETRONICOS}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230727 22:47:39.034" endtime="20230727 22:47:39.086"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:38.959" endtime="20230727 22:47:39.086"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:38.959" endtime="20230727 22:47:39.086"/>
+</kw>
+<kw name="E a categoria &quot;Computadores e Informática&quot; deve ser exibida na página" library="amazon_resources">
+<kw name="Verificar se aparece a categoria &quot;Computadores e Informática&quot;" library="amazon_resources" sourcename="Verificar se aparece a categoria &quot;${NOME_CATEGORIA}&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//img[contains(@alt,'${NOME_CATEGORIA}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230727 22:47:39.153" level="INFO">Element '//img[contains(@alt,'Computadores e Informática')]' is displayed.</msg>
+<status status="PASS" starttime="20230727 22:47:39.087" endtime="20230727 22:47:39.153"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:39.087" endtime="20230727 22:47:39.153"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:39.087" endtime="20230727 22:47:39.153"/>
+</kw>
+<kw name="Fechar Browser" library="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230727 22:47:39.351" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230727 22:47:39.154" endtime="20230727 22:47:39.351"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230727 22:47:39.351" endtime="20230727 22:47:41.559"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:39.154" endtime="20230727 22:47:41.559"/>
+</kw>
+<doc>Esse teste veririca o menu "eletrônicos do site amazon.com.br"
+e verifica a categoria Computadores e Informática</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="PASS" starttime="20230727 22:47:30.690" endtime="20230727 22:47:41.560"/>
+</test>
+<test id="s1-t2" name="Pesquisa de um Produto" line="19">
+<kw name="Abrir Browser" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230727 22:47:41.562" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com.br'.</msg>
+<status status="PASS" starttime="20230727 22:47:41.562" endtime="20230727 22:47:43.974"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230727 22:47:43.974" endtime="20230727 22:47:44.095"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:41.562" endtime="20230727 22:47:44.095"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" library="amazon_resources">
+<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230727 22:47:44.096" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20230727 22:47:44.096" endtime="20230727 22:47:45.852"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MENU_ELETRONICOS}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230727 22:47:45.852" endtime="20230727 22:47:45.876"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:44.096" endtime="20230727 22:47:45.876"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230727 22:47:46.878" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230727 22:47:45.877" endtime="20230727 22:47:46.878"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230727 22:47:46.885" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
+<status status="PASS" starttime="20230727 22:47:46.878" endtime="20230727 22:47:46.885"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:45.877" endtime="20230727 22:47:46.885"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:44.096" endtime="20230727 22:47:46.885"/>
+</kw>
+<kw name="Quando pesquisar pelo produto &quot;Xbox Series S&quot;" library="amazon_resources">
+<kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" library="amazon_resources" sourcename="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_PESQUISA}</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230727 22:47:46.886" level="INFO">Typing text 'Xbox Series S' into text field 'twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230727 22:47:46.886" endtime="20230727 22:47:47.028"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:46.886" endtime="20230727 22:47:47.028"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_PESQUISAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230727 22:47:47.028" level="INFO">Clicking element 'nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20230727 22:47:47.028" endtime="20230727 22:47:48.858"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:47.028" endtime="20230727 22:47:48.858"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:46.886" endtime="20230727 22:47:48.858"/>
+</kw>
+<kw name="Então o título da página deve ficar &quot;Amazon.com.br : Xbox Series S&quot;" library="amazon_resources">
+<kw name="Verificar se o título da página fica &quot;Amazon.com.br : Xbox Series S&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230727 22:47:49.860" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230727 22:47:48.859" endtime="20230727 22:47:49.860"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230727 22:47:49.869" level="INFO">Page title is 'Amazon.com.br : Xbox Series S'.</msg>
+<status status="PASS" starttime="20230727 22:47:49.860" endtime="20230727 22:47:49.869"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:48.859" endtime="20230727 22:47:49.869"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:48.859" endtime="20230727 22:47:49.869"/>
+</kw>
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
+<msg timestamp="20230727 22:47:49.883" level="FAIL">Maximum limit of started keywords and control structures exceeded.</msg>
+<status status="FAIL" starttime="20230727 22:47:49.882" endtime="20230727 22:47:49.883"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.882" endtime="20230727 22:47:49.883"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.882" endtime="20230727 22:47:49.883"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.882" endtime="20230727 22:47:49.883"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.882" endtime="20230727 22:47:49.883"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.882" endtime="20230727 22:47:49.883"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.882" endtime="20230727 22:47:49.883"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.881" endtime="20230727 22:47:49.883"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.881" endtime="20230727 22:47:49.884"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.881" endtime="20230727 22:47:49.884"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.881" endtime="20230727 22:47:49.884"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.881" endtime="20230727 22:47:49.884"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.881" endtime="20230727 22:47:49.884"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.880" endtime="20230727 22:47:49.884"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.880" endtime="20230727 22:47:49.884"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.880" endtime="20230727 22:47:49.885"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.880" endtime="20230727 22:47:49.885"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.880" endtime="20230727 22:47:49.885"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.880" endtime="20230727 22:47:49.885"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.879" endtime="20230727 22:47:49.885"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.879" endtime="20230727 22:47:49.885"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.879" endtime="20230727 22:47:49.885"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.879" endtime="20230727 22:47:49.886"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.879" endtime="20230727 22:47:49.886"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.879" endtime="20230727 22:47:49.886"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.878" endtime="20230727 22:47:49.886"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.878" endtime="20230727 22:47:49.886"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.878" endtime="20230727 22:47:49.886"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.878" endtime="20230727 22:47:49.887"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.878" endtime="20230727 22:47:49.887"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.878" endtime="20230727 22:47:49.887"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.877" endtime="20230727 22:47:49.887"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.877" endtime="20230727 22:47:49.887"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.877" endtime="20230727 22:47:49.887"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.877" endtime="20230727 22:47:49.887"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.877" endtime="20230727 22:47:49.887"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.877" endtime="20230727 22:47:49.887"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.877" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.877" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.877" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.888"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.876" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.875" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.875" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.875" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.875" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.875" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.875" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.875" endtime="20230727 22:47:49.889"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.875" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.875" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.890"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.874" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.873" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.873" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.873" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.873" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.873" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.872" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.872" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.872" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.872" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.872" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.872" endtime="20230727 22:47:49.891"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.872" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.871" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.871" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.871" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.871" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.871" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.871" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.871" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.871" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.871" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.870" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.870" endtime="20230727 22:47:49.892"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.870" endtime="20230727 22:47:49.893"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.870" endtime="20230727 22:47:49.893"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.870" endtime="20230727 22:47:49.893"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.870" endtime="20230727 22:47:49.893"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.870" endtime="20230727 22:47:49.893"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.870" endtime="20230727 22:47:49.893"/>
+</kw>
+<status status="FAIL" starttime="20230727 22:47:49.869" endtime="20230727 22:47:49.893"/>
+</kw>
+<kw name="Fechar Browser" library="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230727 22:47:50.121" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230727 22:47:49.894" endtime="20230727 22:47:50.121"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230727 22:47:50.121" endtime="20230727 22:47:52.276"/>
+</kw>
+<status status="PASS" starttime="20230727 22:47:49.894" endtime="20230727 22:47:52.276"/>
+</kw>
+<doc>Esse teste verifica a busca de um produto</doc>
+<tag>busca_produtos</tag>
+<tag>lista_busca</tag>
+<status status="FAIL" starttime="20230727 22:47:41.561" endtime="20230727 22:47:52.277">Maximum limit of started keywords and control structures exceeded.</status>
+</test>
+<doc>Esta suite testa o site amazon.com.br</doc>
+<status status="FAIL" starttime="20230727 22:47:30.518" endtime="20230727 22:47:52.279"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">busca_produtos</stat>
+<stat pass="1" fail="0" skip="0">categorias</stat>
+<stat pass="0" fail="1" skip="0">lista_busca</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Amazon Testes Gherkin Bdd">Amazon Testes Gherkin Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
