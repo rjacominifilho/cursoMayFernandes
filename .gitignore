@@ -1,0 +1,7 @@
+# ignore all files with .html and .xml extension
+
+.html
+.xml
+
+/reports
+/resultados
